@@ -209,28 +209,40 @@
             </td>
           </tr>
         </table>
-        <div style="display: flex">
+        <div class="class-input">
+          <p class="medium">Class1:</p>
           <input v-model="class1" />
+          <p class="medium">Colour:</p>
           <input v-model="class1Colour" />
         </div>
-        <div style="display: flex">
+        <div class="class-input">
+          <p class="medium">Class2:</p>
           <input v-model="class2" />
+          <p class="medium">Colour:</p>
           <input v-model="class2Colour" />
         </div>
-        <div style="display: flex">
+        <div class="class-input">
+          <p class="medium">Class3:</p>
           <input v-model="class3" />
+          <p class="medium">Colour:</p>
           <input v-model="class3Colour" />
         </div>
-        <div style="display: flex">
+        <div class="class-input">
+          <p class="medium">Class4:</p>
           <input v-model="class4" />
+          <p class="medium">Colour:</p>
           <input v-model="class4Colour" />
         </div>
-        <div style="display: flex">
+        <div class="class-input">
+          <p class="medium">Class6:</p>
           <input v-model="class5" />
+          <p class="medium">Colour:</p>
           <input v-model="class5Colour" />
         </div>
-        <div style="display: flex">
+        <div class="class-input">
+          <p class="medium">Class6:</p>
           <input v-model="class6" />
+          <p class="medium">Colour:</p>
           <input v-model="class6Colour" />
         </div>
       </div>
