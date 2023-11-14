@@ -21,7 +21,7 @@
         class="mode-switch"
         @click="toggleMode()"
       ></icons>
-      <div class="icon-mobile" @click="responsiveNavbar()">â°</div>
+      <div class="icon-mobile" @click="responsiveNavbar()">☰</div>
     </div>
   </header>
   <main :class="isDarkMode === 'true' ? 'dark-mode' : 'light-mode'">

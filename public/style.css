@@ -8,21 +8,24 @@ body {
   transition: background-color 1s ease, color 1s ease;
 }
 
+table {
+  border: 2px solid white;
+  border-radius: 2px;
+}
+
 td {
-  border: 1px solid blue;
+  padding: 4px;
+  border: 2px solid #ffffff80;
+  border-radius: 2px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.event-box::-webkit-scrollbar,
-.search-box::-webkit-scrollbar,
 .container-flex::-webkit-scrollbar {
   width: 6px;
 }
 
-.event-box::-webkit-scrollbar-thumb,
-.search-box::-webkit-scrollbar-thumb,
 .container-flex::-webkit-scrollbar-thumb {
   background-color: rgba(40, 42, 43, 0.75);
   border-radius: 3px;
@@ -54,12 +57,6 @@ td {
   height: calc(100% - 48px);
   overflow-y: auto;
   text-align: center;
-}
-
-.map-container {
-  display: flex;
-  height: 100%;
-  width: 100%;
 }
 
 .background-container {
@@ -124,27 +121,6 @@ td {
   background-color: rgba(255, 255, 255, 0.075);
 }
 
-.close {
-  position: absolute;
-  right: 8px;
-  transition: background-color 1s ease, fill 1s ease;
-}
-
-.edit {
-  position: absolute;
-  right: 8px;
-  top: 18px;
-  transition: background-color 1s ease, fill 1s ease;
-}
-
-.edit-panel {
-  text-align: left;
-}
-
-.edit-panel-sub {
-  margin-left: 12px;
-}
-
 .mode-switch {
   padding: 12px;
   cursor: pointer;
@@ -154,33 +130,15 @@ td {
   transition: background-color 1s ease, fill 1s ease;
 }
 
-.search-item {
-  transition: background-color 1s ease;
-}
-
-.event-box::-webkit-scrollbar-thumb:hover,
-.search-box::-webkit-scrollbar-thumb:hover,
-.highlighted,
 .mode-switch:hover,
-.search-item:hover,
-.close:hover,
-.edit:hover,
 .navbar a:hover,
 .icon-mobile:hover {
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 0.25s ease, fill 1s ease;
 }
 
-.light-mode .sub-map-item:hover,
-.light-mode .map-item:hover,
-.light-mode .event-box::-webkit-scrollbar-thumb:hover,
-.light-mode .search-box::-webkit-scrollbar-thumb:hover,
-.light-mode .highlighted,
 .light-mode .container-flex::-webkit-scrollbar-thumb:hover,
 .light-mode .mode-switch:hover,
-.light-mode .search-item:hover,
-.light-mode .close:hover,
-.light-mode .edit:hover,
 .light-mode .navbar a:hover,
 .light-mode .icon-mobile:hover {
   background-color: rgba(191, 191, 191, 0.6);
@@ -233,129 +191,6 @@ td {
   opacity: 0;
   animation: slideIn-menu 1s forwards, fadeIn 1s forwards;
   align-content:center ;
-}
-
-.side-bar {
-  width: clamp(334px, calc(30% - 16px), 484px);
-  padding: 8px;
-  height: calc(100% - 16px);
-  background-color: rgba(40, 42, 43, 0.75);
-  animation: fadeIn 1s forwards;
-}
-
-.map-page {
-  width: calc(100% - clamp(350px, 30%, 500px));
-  height: 100%;
-  overflow-y: auto;
-}
-
-.map {
-  position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.075);
-  margin: 8px auto auto auto;
-  height: 734px;
-  width: 528px;
-  transition: border 1s ease;
-}
-
-.light-mode .map {
-  border: 1px solid rgba(0, 0, 0, 0.075);
-}
-
-.map-item {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background-color: rgba(0, 0, 0, 0.6);
-  transition: background-color 1s ease, color 1s ease;
-  cursor: pointer;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.sub-map-item {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
-  position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background-color: rgba(0, 0, 0, 0.6);
-  transition: background-color 1s ease, color 1s ease;
-  cursor: pointer;
-  font-size: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.sub-map-item:hover,
-.map-item:hover {
-  background-color: rgba(20, 20, 20, 0.9);
-}
-
-.map-background {
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: background-color 1s ease;
-}
-
-.light-mode .map-background {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.selected {
-  outline: 5px solid yellow;
-  z-index: 3;
-}
-
-.lc-block {
-  position: absolute;
-  cursor: pointer;
-  width: 72px;
-  height: 72px;
-  line-height: 8px;
-  display: flex;
-}
-
-.block {
-  position: absolute;
-  line-height: 8px;
-}
-
-.block-title {
-  cursor: pointer;
-  width: 100%;
-  position: absolute;
-  bottom: 76px;
-  line-height: 12px
-}
-
-.block-title-other {
-  cursor: pointer;
-  width: 100%;
-  position: absolute;
-  line-height: 12px
-}
-
-.block-row {
-  display: flex;
-}
-
-.event-box {
-  overflow-y: auto;
-  height: calc(100% - 96px);
-  text-align: left;
-  padding: 8px;
-}
-
-.search-box {
-  overflow-y: auto;
-  height: calc(100% - 64px);
-  text-align: left;
-  padding: 8px;
 }
 
 .button {
@@ -469,55 +304,24 @@ a {
   }
 }
 
-.school-events {
-text-decoration: mediumorchid;
-}
-
-.events {
-  text-align: left;
-}
-
-.event {
-  display: flex;
-  justify-content: space-between;
-}
-
-.rooms {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.class-details {
-  display: flex;
-}
-
 input,
-.search-item,
 p,
 a,
 input,
-.search-item,
 p,
 a,
 input,
-.side-bar,
 .menu,
 .navbar {
   transition: background-color 1s ease, color 1s ease, filter 0.3s ease;
 }
 
-.light-mode .close,
-.light-mode .edit,
 .light-mode svg {
   fill: black;
 }
 
-.light-mode .map-item,
-.light-mode .sub-map-item,
 .light-mode .button,
 .light-mode input,
-.light-mode .search-item,
 .light-mode .icon-mobile,
 .light-mode p,
 .light-mode a {
@@ -525,13 +329,8 @@ input,
   transition: background-color 1s ease, color 1s ease;
 }
 
-.light-mode .map-item,
-.light-mode .sub-map-item,
-.light-mode .event-box::-webkit-scrollbar-thumb,
-.light-mode .search-box::-webkit-scrollbar-thumb,
 .light-mode .container-flex::-webkit-scrollbar-thumb,
 .light-mode input,
-.light-mode .side-bar,
 .light-mode .menu,
 .light-mode .menu-button,
 .light-mode .button,

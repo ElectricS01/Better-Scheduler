@@ -1,16 +1,20 @@
 <template>
   <div class="container-flex">
-    <div class="map-container">
+    <div class="menu">
+      <p class="title-menu">Scheduler</p>
       <div>
-        <table
-          style="
-            table-layout: fixed;
-            width: 800px;
-            border: 1px solid red;
-            height: 300px;
-          "
-        >
+        <table>
           <tr>
+            <td>Week A</td>
+            <td>Period 1</td>
+            <td>Period 2</td>
+            <td>Period 3</td>
+            <td>Period 4</td>
+            <td>Period 5</td>
+            <td>Period 6</td>
+          </tr>
+          <tr>
+            <td>1</td>
             <td :style="{ backgroundColor: '#' + class1Colour }">
               {{ class1 }}
             </td>
@@ -31,6 +35,7 @@
             </td>
           </tr>
           <tr>
+            <td>2</td>
             <td :style="{ backgroundColor: '#' + class4Colour }">
               {{ class4 }}
             </td>
@@ -51,6 +56,7 @@
             </td>
           </tr>
           <tr>
+            <td>3</td>
             <td :style="{ backgroundColor: '#' + class5Colour }">
               {{ class5 }}
             </td>
@@ -65,6 +71,7 @@
             </td>
           </tr>
           <tr>
+            <td>4</td>
             <td :style="{ backgroundColor: '#' + class3Colour }">
               {{ class3 }}
             </td>
@@ -85,6 +92,7 @@
             </td>
           </tr>
           <tr>
+            <td>5</td>
             <td :style="{ backgroundColor: '#' + class4Colour }">
               {{ class4 }}
             </td>
@@ -104,8 +112,11 @@
               {{ class5 }}
             </td>
           </tr>
-          <tr>break</tr>
           <tr>
+            <td>Week B</td>
+          </tr>
+          <tr>
+            <td>1</td>
             <td :style="{ backgroundColor: '#' + class1Colour }">
               {{ class1 }}
             </td>
@@ -126,6 +137,7 @@
             </td>
           </tr>
           <tr>
+            <td>2</td>
             <td :style="{ backgroundColor: '#' + class4Colour }">
               {{ class4 }}
             </td>
@@ -146,6 +158,7 @@
             </td>
           </tr>
           <tr>
+            <td>3</td>
             <td :style="{ backgroundColor: '#' + class5Colour }">
               {{ class5 }}
             </td>
@@ -160,6 +173,7 @@
             </td>
           </tr>
           <tr>
+            <td>4</td>
             <td :style="{ backgroundColor: '#' + class6Colour }">
               {{ class6 }}
             </td>
@@ -180,6 +194,7 @@
             </td>
           </tr>
           <tr>
+            <td>5</td>
             <td :style="{ backgroundColor: '#' + class5Colour }">
               {{ class5 }}
             </td>
