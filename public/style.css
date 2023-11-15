@@ -103,8 +103,14 @@ body {
   transition: background-color 1s ease;
 }
 
+.menu-button.active,
 .navbar a.active {
   background-color: rgba(255, 255, 255, 0.075);
+}
+
+.light-mode .menu-button.active,
+.light-mode .navbar a.active {
+  background-color: rgba(0, 0, 0, 0.075);
 }
 
 .mode-switch {
@@ -120,6 +126,7 @@ body {
 
 .mode-switch:hover,
 .navbar a:hover,
+.menu-button:hover,
 .icon-mobile:hover {
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 0.25s ease, fill 1s ease;
@@ -127,9 +134,10 @@ body {
 
 .light-mode .container-flex::-webkit-scrollbar-thumb:hover,
 .light-mode .mode-switch:hover,
+.light-mode .menu-button:hover,
 .light-mode .navbar a:hover,
 .light-mode .icon-mobile:hover {
-  background-color: rgba(191, 191, 191, 0.6);
+  background-color: rgba(0, 0, 0, 0.1);
   transition: background-color 0.25s ease, fill 1s ease;
 }
 
@@ -189,29 +197,13 @@ body {
 }
 
 .menu-button {
-  margin: 0 4px;
+  cursor: pointer;
   color: white;
   background-color: rgba(40, 42, 43, 0.75);
   padding: 8px;
   border-radius: 4px;
   animation: fadeIn 1s forwards;
   transition: background-color 1s ease, color 1s ease;
-}
-
-.menu-button:hover {
-  background-color: rgba(52, 55, 56, 0.75);
-}
-
-.menu-button:active {
-  background-color: rgba(65, 68, 69, 0.75);
-}
-
-.light-mode .menu-button:hover {
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.light-mode .menu-button:active {
-  background-color: rgba(255, 255, 255, 0.9);
 }
 
 table {
@@ -228,6 +220,10 @@ td {
   text-overflow: ellipsis;
 }
 
+img {
+  margin: -36px 0 -8px;
+}
+
 input {
   color: white;
   font-size: 16px;
@@ -238,6 +234,10 @@ input {
   border-radius: 4px;
   box-sizing: border-box;
   background-color: #3d3d3d40;
+}
+
+.light-mode input {
+  background-color: #5B5B5B40;
 }
 
 input:focus {
@@ -324,8 +324,10 @@ input,
   fill: black;
 }
 
+.light-mode td,
 .light-mode input,
 .light-mode .icon-mobile,
+.light-mode .menu-button,
 .light-mode p,
 .light-mode a {
   color: black;
@@ -333,10 +335,21 @@ input,
 }
 
 .light-mode .container-flex::-webkit-scrollbar-thumb,
-.light-mode input,
 .light-mode .menu,
 .light-mode .menu-button,
 .light-mode .navbar {
   background-color: rgba(255, 255, 255, 0.6);
   transition: background-color 1s ease, color 1s ease;
+}
+
+@keyframes moveUpAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-800px);
+  }
+  75% {
+    transform: translateY(-800px);
+  }
 }

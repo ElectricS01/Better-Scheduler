@@ -3,112 +3,154 @@
     <div class="menu">
       <p class="title-menu">Scheduler</p>
       <div>
-        <table>
+        <div
+          v-if="test"
+          style="
+            position: fixed;
+            rotate: 30deg;
+            bottom: -800px;
+            animation: moveUpAnimation 15s forwards;
+          "
+        >
+          <div
+            style="
+              padding: 30px;
+              border-radius: 100px;
+              background-color: white;
+              color: black;
+              font-size: 30px;
+            "
+          >
+            Nice shoes
+          </div>
+          <img
+            src="https://i.electrics01.com/i/904a8667e883.png"
+            alt=""
+            width="200"
+          />
+        </div>
+        <div style="display: flex">
+          <div
+            class="menu-button"
+            :class="{ active: option === '2023' }"
+            @click="option = '2023'"
+          >
+            2023
+          </div>
+          <div
+            class="menu-button"
+            :class="{ active: option === '2024' }"
+            @click="option = '2024'"
+          >
+            2024
+          </div>
+        </div>
+        <table v-if="option === '2023'">
           <tr>
-            <td>Week A</td>
-            <td>Period 1</td>
-            <td>Period 2</td>
-            <td>Period 3</td>
-            <td>Period 4</td>
-            <td>Period 5</td>
-            <td>Period 6</td>
+            <td style="width: 56px">Week A</td>
+            <td style="width: 10vw">Period 1</td>
+            <td style="width: 10vw">Period 2</td>
+            <td style="width: 10vw">Period 3</td>
+            <td style="width: 10vw">Period 4</td>
+            <td style="width: 10vw">Period 5</td>
+            <td style="width: 10vw">Period 6</td>
           </tr>
           <tr>
             <td>1</td>
-            <td :style="{ backgroundColor: '#' + class1Colour }">
+            <td :style="{ backgroundColor: '#' + class1Colour + '80' }">
               {{ class1 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class1Colour }">
+            <td :style="{ backgroundColor: '#' + class1Colour + '80' }">
               {{ class1 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class2Colour }">
+            <td :style="{ backgroundColor: '#' + class2Colour + '80' }">
               {{ class2 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class2Colour }">
+            <td :style="{ backgroundColor: '#' + class2Colour + '80' }">
               {{ class2 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class3Colour }">
+            <td :style="{ backgroundColor: '#' + class3Colour + '80' }">
               {{ class3 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class3Colour }">
+            <td :style="{ backgroundColor: '#' + class3Colour + '80' }">
               {{ class3 }}
             </td>
           </tr>
           <tr>
             <td>2</td>
-            <td :style="{ backgroundColor: '#' + class4Colour }">
+            <td :style="{ backgroundColor: '#' + class4Colour + '80' }">
               {{ class4 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class5Colour }">
+            <td :style="{ backgroundColor: '#' + class5Colour + '80' }">
               {{ class5 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class3Colour }">
+            <td :style="{ backgroundColor: '#' + class3Colour + '80' }">
               {{ class3 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class1Colour }">
+            <td :style="{ backgroundColor: '#' + class1Colour + '80' }">
               {{ class1 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class6Colour }">
+            <td :style="{ backgroundColor: '#' + class6Colour + '80' }">
               {{ class6 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class2Colour }">
+            <td :style="{ backgroundColor: '#' + class2Colour + '80' }">
               {{ class2 }}
             </td>
           </tr>
           <tr>
             <td>3</td>
-            <td :style="{ backgroundColor: '#' + class5Colour }">
+            <td :style="{ backgroundColor: '#' + class5Colour + '80' }">
               {{ class5 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class5Colour }">
+            <td :style="{ backgroundColor: '#' + class5Colour + '80' }">
               {{ class5 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class4Colour }">
+            <td :style="{ backgroundColor: '#' + class4Colour + '80' }">
               {{ class4 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class4Colour }">
+            <td :style="{ backgroundColor: '#' + class4Colour + '80' }">
               {{ class4 }}
             </td>
           </tr>
           <tr>
             <td>4</td>
-            <td :style="{ backgroundColor: '#' + class3Colour }">
+            <td :style="{ backgroundColor: '#' + class3Colour + '80' }">
               {{ class3 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class3Colour }">
+            <td :style="{ backgroundColor: '#' + class3Colour + '80' }">
               {{ class3 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class1Colour }">
+            <td :style="{ backgroundColor: '#' + class1Colour + '80' }">
               {{ class1 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class1Colour }">
+            <td :style="{ backgroundColor: '#' + class1Colour + '80' }">
               {{ class1 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class2Colour }">
+            <td :style="{ backgroundColor: '#' + class2Colour + '80' }">
               {{ class2 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class6Colour }">
+            <td :style="{ backgroundColor: '#' + class6Colour + '80' }">
               {{ class6 }}
             </td>
           </tr>
           <tr>
             <td>5</td>
-            <td :style="{ backgroundColor: '#' + class4Colour }">
+            <td :style="{ backgroundColor: '#' + class4Colour + '80' }">
               {{ class4 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class4Colour }">
+            <td :style="{ backgroundColor: '#' + class4Colour + '80' }">
               {{ class4 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class6Colour }">
+            <td :style="{ backgroundColor: '#' + class6Colour + '80' }">
               {{ class6 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class6Colour }">
+            <td :style="{ backgroundColor: '#' + class6Colour + '80' }">
               {{ class6 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class5Colour }">
+            <td :style="{ backgroundColor: '#' + class5Colour + '80' }">
               {{ class5 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class5Colour }">
+            <td :style="{ backgroundColor: '#' + class5Colour + '80' }">
               {{ class5 }}
             </td>
           </tr>
@@ -117,95 +159,211 @@
           </tr>
           <tr>
             <td>1</td>
-            <td :style="{ backgroundColor: '#' + class1Colour }">
+            <td :style="{ backgroundColor: '#' + class1Colour + '80' }">
               {{ class1 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class1Colour }">
+            <td :style="{ backgroundColor: '#' + class1Colour + '80' }">
               {{ class1 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class2Colour }">
+            <td :style="{ backgroundColor: '#' + class2Colour + '80' }">
               {{ class2 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class2Colour }">
+            <td :style="{ backgroundColor: '#' + class2Colour + '80' }">
               {{ class2 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class3Colour }">
+            <td :style="{ backgroundColor: '#' + class3Colour + '80' }">
               {{ class3 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class3Colour }">
+            <td :style="{ backgroundColor: '#' + class3Colour + '80' }">
               {{ class3 }}
             </td>
           </tr>
           <tr>
             <td>2</td>
-            <td :style="{ backgroundColor: '#' + class4Colour }">
+            <td :style="{ backgroundColor: '#' + class4Colour + '80' }">
               {{ class4 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class5Colour }">
+            <td :style="{ backgroundColor: '#' + class5Colour + '80' }">
               {{ class5 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class3Colour }">
+            <td :style="{ backgroundColor: '#' + class3Colour + '80' }">
               {{ class3 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class1Colour }">
+            <td :style="{ backgroundColor: '#' + class1Colour + '80' }">
               {{ class1 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class6Colour }">
+            <td :style="{ backgroundColor: '#' + class6Colour + '80' }">
               {{ class6 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class2Colour }">
+            <td :style="{ backgroundColor: '#' + class2Colour + '80' }">
               {{ class2 }}
             </td>
           </tr>
           <tr>
             <td>3</td>
-            <td :style="{ backgroundColor: '#' + class5Colour }">
+            <td :style="{ backgroundColor: '#' + class5Colour + '80' }">
               {{ class5 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class5Colour }">
+            <td :style="{ backgroundColor: '#' + class5Colour + '80' }">
               {{ class5 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class4Colour }">
+            <td :style="{ backgroundColor: '#' + class4Colour + '80' }">
               {{ class4 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class4Colour }">
+            <td :style="{ backgroundColor: '#' + class4Colour + '80' }">
               {{ class4 }}
             </td>
           </tr>
           <tr>
             <td>4</td>
-            <td :style="{ backgroundColor: '#' + class6Colour }">
+            <td :style="{ backgroundColor: '#' + class6Colour + '80' }">
               {{ class6 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class6Colour }">
+            <td :style="{ backgroundColor: '#' + class6Colour + '80' }">
               {{ class6 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class2Colour }">
+            <td :style="{ backgroundColor: '#' + class2Colour + '80' }">
               {{ class2 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class2Colour }">
+            <td :style="{ backgroundColor: '#' + class2Colour + '80' }">
               {{ class2 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class3Colour }">
+            <td :style="{ backgroundColor: '#' + class3Colour + '80' }">
               {{ class3 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class1Colour }">
+            <td :style="{ backgroundColor: '#' + class1Colour + '80' }">
               {{ class1 }}
             </td>
           </tr>
           <tr>
             <td>5</td>
-            <td :style="{ backgroundColor: '#' + class5Colour }">
+            <td :style="{ backgroundColor: '#' + class5Colour + '80' }">
               {{ class5 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class4Colour }">
+            <td :style="{ backgroundColor: '#' + class4Colour + '80' }">
               {{ class4 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class6Colour }">
+            <td :style="{ backgroundColor: '#' + class6Colour + '80' }">
               {{ class6 }}
             </td>
-            <td :style="{ backgroundColor: '#' + class6Colour }">
+            <td :style="{ backgroundColor: '#' + class6Colour + '80' }">
               {{ class6 }}
+            </td>
+          </tr>
+        </table>
+        <table v-else-if="option === '2024'">
+          <tr>
+            <td style="width: 56px">Week</td>
+            <td style="width: 10vw">Period 1</td>
+            <td style="width: 10vw">Period 2</td>
+            <td style="width: 10vw">Period 3</td>
+            <td style="width: 10vw">Period 4</td>
+            <td style="width: 10vw">Period 5</td>
+            <td style="width: 10vw">Period 6</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td :style="{ backgroundColor: '#' + class1Colour + '80' }">
+              {{ class1 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class1Colour + '80' }">
+              {{ class1 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class2Colour + '80' }">
+              {{ class2 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class2Colour + '80' }">
+              {{ class2 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class3Colour + '80' }">
+              {{ class3 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class3Colour + '80' }">
+              {{ class3 }}
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td :style="{ backgroundColor: '#' + class4Colour + '80' }">
+              {{ class4 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class2Colour + '80' }">
+              {{ class2 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class3Colour + '80' }">
+              {{ class3 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class1Colour + '80' }">
+              {{ class1 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class5Colour + '80' }">
+              {{ class5 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class6Colour + '80' }">
+              {{ class6 }}
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td :style="{ backgroundColor: '#' + class5Colour + '80' }">
+              {{ class5 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class5Colour + '80' }">
+              {{ class5 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class4Colour + '80' }">
+              {{ class4 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class4Colour + '80' }">
+              {{ class4 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class6Colour + '80' }">
+              {{ class6 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class6Colour + '80' }">
+              {{ class6 }}
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td :style="{ backgroundColor: '#' + class2Colour + '80' }">
+              {{ class2 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class2Colour + '80' }">
+              {{ class2 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class3Colour + '80' }">
+              {{ class3 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class3Colour + '80' }">
+              {{ class3 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class1Colour + '80' }">
+              {{ class1 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class1Colour + '80' }">
+              {{ class1 }}
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td :style="{ backgroundColor: '#' + class6Colour + '80' }">
+              {{ class6 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class6Colour + '80' }">
+              {{ class6 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class4Colour + '80' }">
+              {{ class4 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class4Colour + '80' }">
+              {{ class4 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class5Colour + '80' }">
+              {{ class5 }}
+            </td>
+            <td :style="{ backgroundColor: '#' + class5Colour + '80' }">
+              {{ class5 }}
             </td>
           </tr>
         </table>
@@ -253,6 +411,8 @@
 <script setup>
 import { ref } from "vue"
 
+const test = ref(false)
+const option = ref("2023")
 const class1 = ref("Freea")
 const class2 = ref("Englishd")
 const class3 = ref("Physicsa")
@@ -265,4 +425,8 @@ const class3Colour = ref("008080")
 const class4Colour = ref("800080")
 const class5Colour = ref("000080")
 const class6Colour = ref("000000")
+
+setTimeout(() => {
+  test.value = true
+}, 10000 + Math.random() * 20000)
 </script>
