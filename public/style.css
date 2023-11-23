@@ -142,7 +142,7 @@ body {
 }
 
 .navbar a:not(:first-child) {
-  margin: 4px 0 4px 4px;
+  margin: 4px 4px 4px 0;
 }
 
 .icon-mobile {
@@ -340,16 +340,4 @@ input,
 .light-mode .navbar {
   background-color: rgba(255, 255, 255, 0.6);
   transition: background-color 1s ease, color 1s ease;
-}
-
-@keyframes moveUpAnimation {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(-800px);
-  }
-  75% {
-    transform: translateY(-800px);
-  }
 }
