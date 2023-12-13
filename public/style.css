@@ -55,10 +55,10 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background-image: url('background.webp');
+  background-image: url('background.png');
   background-size: cover;
-  filter: brightness(1) blur(10px) saturate(1);
-  animation: moveImage 100s infinite alternate;
+  filter: brightness(1) blur(20px) saturate(1);
+  animation: moveImage 120s infinite alternate;
   transition: filter 0.3s ease;
 }
 
@@ -68,16 +68,16 @@ body {
 
 @keyframes moveImage {
   0%, 100% {
-    transform: scale(1.4) translate(5%, 5%);
+    transform: scale(1.4) translate(0, -10%);
   }
-  25% {
-    transform: scale(1.35) translate(8%, -2%);
+  20% {
+    transform: scale(1.35) translate(30%, -2%);
   }
-  50% {
-    transform: scale(1.4) translate(0, 0);
+  40% {
+    transform: scale(1.4) translate(10%, -20%);
   }
-  75% {
-    transform: scale(1.35) translate(-2%, 8%);
+  80% {
+    transform: scale(1.35) translate(-30%, 0%);
   }
 }
 
