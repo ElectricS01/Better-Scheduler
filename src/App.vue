@@ -1,6 +1,6 @@
 <template>
   <header :class="isDarkMode === 'true' ? 'dark-mode' : 'light-mode'">
-    <div class="navbar" id="mobile-navbar">
+    <div id="mobile-navbar" class="navbar">
       <router-link
         to="/"
         :class="{ active: active('/') }"
@@ -26,20 +26,20 @@
         :icon="isDarkMode === 'true' ? 'sun' : 'moon'"
         class="mode-switch"
         @click="toggleMode()"
-      ></icons>
+      />
       <div class="icon-mobile" @click="responsiveNavbar()">☰</div>
     </div>
   </header>
   <main :class="isDarkMode === 'true' ? 'dark-mode' : 'light-mode'">
     <div class="background-container">
-      <div class="background"></div>
+      <div class="background" />
       <router-view />
     </div>
   </main>
 </template>
 
 <script setup>
-import Icons from "@/components/Icons.vue"
+import Icons from "./components/Icons.vue"
 import { useRoute } from "vue-router"
 import { ref } from "vue"
 

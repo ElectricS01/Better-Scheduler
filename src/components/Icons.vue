@@ -1,8 +1,8 @@
 <template>
   <svg
-    :fill="color || 'white'"
-    :width="size"
-    :height="size || 24"
+    fill="white"
+    width="24"
+    height="24"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
   >
@@ -18,5 +18,5 @@
 </template>
 
 <script setup>
-defineProps(["color", "size", "icon"])
+defineProps({ icon: String })
 </script>
