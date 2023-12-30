@@ -13,12 +13,12 @@
           {{ obj.name }}
         </div>
       </div>
-      <table>
-        <tr v-for="row in newData[option].rows" :key="row">
-          <td
+      <div class="table">
+        <div v-for="row in newData[option].rows" :key="row" class="table-row">
+          <div
             v-for="column in row"
             :key="column"
-            style="width: 10vw"
+            :class="column === null ? 'table-box-spacer' : 'table-box'"
             :style="{
               backgroundColor:
                 typeof column === 'number'
@@ -29,9 +29,9 @@
             {{
               typeof column === "number" ? newData[0].classes[column] : column
             }}
-          </td>
-        </tr>
-      </table>
+          </div>
+        </div>
+      </div>
       <div
         v-for="(obj, index) in newData[option].classes"
         :key="obj"
@@ -52,7 +52,7 @@
 <script setup>
 import data from "../assets/data.json"
 import { ref } from "vue"
-const newData = ref(data)
 
+const newData = ref(data)
 const option = ref(0)
 </script>
