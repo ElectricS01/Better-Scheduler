@@ -204,6 +204,7 @@ body {
 }
 
 .menu-button {
+  color: white;
   cursor: pointer;
   background-color: rgba(40, 42, 43, 0.75);
   padding: 8px;
