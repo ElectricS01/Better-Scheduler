@@ -106,11 +106,13 @@ body {
 }
 
 .menu-button.active,
+.menu-button-settings.active,
 .navbar a.active {
   background-color: rgba(255, 255, 255, 0.075);
 }
 
 .light-mode .menu-button.active,
+.light-mode .menu-button-settings.active,
 .light-mode .navbar a.active {
   background-color: rgba(0, 0, 0, 0.075);
 }
@@ -126,17 +128,21 @@ body {
   transition: background-color 1s ease, fill 1s ease;
 }
 
+.table-add:hover,
 .mode-switch:hover,
 .navbar a:hover,
 .menu-button:hover,
+.menu-button-settings:hover,
 .icon-mobile:hover {
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 0.25s ease, fill 1s ease;
 }
 
+.light-mode .table-add:hover,
 .light-mode .container-flex::-webkit-scrollbar-thumb:hover,
 .light-mode .mode-switch:hover,
 .light-mode .menu-button:hover,
+.light-mode .menu-button-settings:hover,
 .light-mode .navbar a:hover,
 .light-mode .icon-mobile:hover {
   background-color: rgba(0, 0, 0, 0.1);
@@ -199,12 +205,23 @@ body {
 
 .menu-button {
   cursor: pointer;
-  color: white;
   background-color: rgba(40, 42, 43, 0.75);
   padding: 8px;
   border-radius: 4px;
   animation: fadeIn 1s forwards;
   transition: background-color 1s ease, color 1s ease;
+  margin-right: 2px;
+  min-width: 14px;
+}
+
+.menu-button-settings {
+  cursor: pointer;
+  background-color: rgba(40, 42, 43, 0.75);
+  padding: 8px;
+  border-radius: 4px;
+  animation: fadeIn 1s forwards;
+  transition: background-color 1s ease, color 1s ease;
+  margin-left: auto;
 }
 
 .table {
@@ -234,6 +251,13 @@ body {
 
 .table-box-spacer {
   border: 2px solid #0000;
+}
+
+.table-add {
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 4px;
+  transition: background-color 1s ease;
 }
 
 img {
@@ -340,6 +364,8 @@ input,
   fill: black;
 }
 
+.light-mode .table-box,
+.light-mode .table-add,
 .light-mode td,
 .light-mode input,
 .light-mode .icon-mobile,
@@ -350,9 +376,11 @@ input,
   transition: background-color 1s ease, color 1s ease;
 }
 
+.light-mode .table-add,
 .light-mode .container-flex::-webkit-scrollbar-thumb,
 .light-mode .menu,
 .light-mode .menu-button,
+.light-mode .menu-button-settings,
 .light-mode .navbar {
   background-color: rgba(255, 255, 255, 0.6);
   transition: background-color 1s ease, color 1s ease;

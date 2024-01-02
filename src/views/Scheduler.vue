@@ -5,13 +5,21 @@
       <div style="display: flex">
         <div
           v-for="(obj, index) in newData"
-          :key="obj"
+          :key="obj.name"
           class="menu-button"
           :class="{ active: option === index }"
           @click="option = index"
         >
           {{ obj.name }}
         </div>
+        <div class="menu-button" v-if="settings">+</div>
+        <icons
+          icon="settings"
+          size="18"
+          class="menu-button-settings"
+          :class="{ active: settings }"
+          @click="settings = !settings"
+        />
       </div>
       <div class="table">
         <div v-for="row in newData[option].rows" :key="row" class="table-row">
@@ -30,7 +38,9 @@
               typeof column === "number" ? newData[0].classes[column] : column
             }}
           </div>
+          <div class="table-add" v-if="settings">+</div>
         </div>
+        <div class="table-add" v-if="settings">+</div>
       </div>
       <div
         v-for="(obj, index) in newData[option].classes"
@@ -52,7 +62,9 @@
 <script setup>
 import data from "../assets/data.json"
 import { ref } from "vue"
+import Icons from "../components/Icons.vue"
 
 const newData = ref(data)
 const option = ref(0)
+const settings = ref(false)
 </script>
