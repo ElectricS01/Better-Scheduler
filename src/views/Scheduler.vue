@@ -31,7 +31,8 @@
               backgroundColor:
                 typeof column === 'number'
                   ? '#' + newData[option].colours[column]
-                  : ''
+                  : '',
+                  flex: 'calc(100% / ' + newData[option].widths[column] + ' - 14px) 0 0'
             }"
           >
             {{
