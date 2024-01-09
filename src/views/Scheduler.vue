@@ -12,7 +12,7 @@
         >
           {{ obj.name }}
         </div>
-        <div class="menu-button" v-if="settings">+</div>
+        <div v-if="settings" class="menu-button">+</div>
         <icons
           icon="settings"
           size="18"
@@ -22,26 +22,35 @@
         />
       </div>
       <div class="table">
-        <div v-for="row in newData[option].rows" :key="row" class="table-row">
+        <div
+          v-for="(row, index) in newData[option].rows"
+          :key="row"
+          class="table-row"
+        >
           <div
-            v-for="column in row"
+            v-for="(column, index1) in row"
             :key="column"
             :class="column === null ? 'table-box-spacer' : 'table-box'"
             :style="{
               backgroundColor:
                 typeof column === 'number'
-                  ? '#' + newData[option].colours[column]
+                  ? '#' + newData[option].classes[column][1]
                   : '',
-                  flex: 'calc(100% / ' + newData[option].widths[column] + ' - 14px) 0 0'
+              flex:
+                'calc(100% / ' +
+                newData[option].widths[index][index1] +
+                ' - 14px) 0 0'
             }"
           >
             {{
-              typeof column === "number" ? newData[0].classes[column] : column
+              typeof column === "number"
+                ? newData[option].classes[column][0]
+                : column
             }}
           </div>
-          <div class="table-add" v-if="settings">+</div>
+          <div v-if="settings" class="table-add">+</div>
         </div>
-        <div class="table-add" v-if="settings">+</div>
+        <div v-if="settings" class="table-add">+</div>
       </div>
       <div
         v-for="(obj, index) in newData[option].classes"
@@ -49,11 +58,11 @@
         class="class-input"
       >
         <p class="medium">Class{{ index + 1 }}:</p>
-        <input v-model="newData[option].classes[index]" />
+        <input v-model="newData[option].classes[index][0]" />
         <p class="medium">Colour:</p>
         <input
-          v-model="newData[option].colours[index]"
-          :style="{ border: '1px solid #' + newData[option].colours[index] }"
+          v-model="newData[option].classes[index][1]"
+          :style="{ border: '1px solid #' + newData[option].classes[index][1] }"
         />
       </div>
     </div>
