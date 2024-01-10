@@ -246,7 +246,6 @@ body {
   border-radius: 4px;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .table-box-spacer {

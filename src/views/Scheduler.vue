@@ -8,7 +8,7 @@
           :key="obj.name"
           class="menu-button"
           :class="{ active: option === index }"
-          @click="option = index"
+          @click="(option = index), router.push('/scheduler?page=' + obj.name)"
         >
           {{ obj.name }}
         </div>
@@ -73,8 +73,16 @@
 import data from "../assets/data.json"
 import { ref } from "vue"
 import Icons from "../components/Icons.vue"
+import { useRoute, useRouter } from "vue-router"
 
+const router = useRouter()
+const route = useRoute()
 const newData = ref(data)
 const option = ref(0)
 const settings = ref(false)
+
+option.value = newData.value.indexOf(
+  newData.value.find((item) => item.name === route.query.page)
+)
+if (option.value === -1) option.value = 0
 </script>
