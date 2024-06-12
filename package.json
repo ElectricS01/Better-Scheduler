@@ -1,7 +1,7 @@
 {
   "name": "betterscheduler",
   "private": true,
-  "version": "0.10.4",
+  "version": "0.10.5",
   "type": "module",
   "scripts": {
     "dev": "bunx --bun vite",
@@ -9,15 +9,15 @@
     "lint": "eslint --ext .js,.vue --fix src"
   },
   "dependencies": {
-    "@vitejs/plugin-vue": "^5.0.0",
-    "vite": "^5.0.10",
-    "vite-plugin-pwa": "^0.17.4",
-    "vue": "^3.4.0",
-    "vue-router": "^4.2.5"
+    "@vitejs/plugin-vue": "^5.0.5",
+    "vite": "^5.2.13",
+    "vite-plugin-pwa": "^0.17.5",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.3"
   },
   "devDependencies": {
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-vue": "^9.19.2"
+    "eslint-plugin-vue": "^9.26.0"
   }
 }
