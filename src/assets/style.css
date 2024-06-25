@@ -60,7 +60,6 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background-image: url("background.png");
   background-size: cover;
   filter: brightness(1) blur(10px) saturate(1);
   animation: moveImage 100s infinite alternate;
