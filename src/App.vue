@@ -32,7 +32,13 @@
   </header>
   <main :class="isDarkMode === 'true' ? 'dark-mode' : 'light-mode'">
     <div class="background-container">
-      <div class="background" />
+      <img
+        class="background"
+        :style="{ opacity: loaded ? 1 : 0 }"
+        alt="background"
+        src="/src/assets/background.png"
+        @load="loaded = true"
+      />
       <router-view />
     </div>
   </main>
@@ -46,6 +52,7 @@ import { ref } from "vue"
 const route = useRoute()
 
 const isDarkMode = ref("true")
+const loaded = ref(false)
 
 if (localStorage.getItem("isDarkMode")) {
   isDarkMode.value = localStorage.getItem("isDarkMode")
