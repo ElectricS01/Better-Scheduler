@@ -10,10 +10,12 @@ body {
     color 1s ease;
 }
 
+.container::-webkit-scrollbar,
 .container-flex::-webkit-scrollbar {
   width: 6px;
 }
 
+.container::-webkit-scrollbar-thumb,
 .container-flex::-webkit-scrollbar-thumb {
   background-color: rgba(40, 42, 43, 0.75);
   border-radius: 3px;
@@ -22,6 +24,7 @@ body {
     fill 1s ease;
 }
 
+.container::-webkit-scrollbar-thumb:hover,
 .container-flex::-webkit-scrollbar-thumb:hover {
   background-color: rgba(49, 52, 53, 0.75);
 }

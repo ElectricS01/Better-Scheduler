@@ -13,7 +13,7 @@
         and based off
         <a href="https://electrics01.com/mapit">Mapit</a>
       </p>
-      <p class="small">Version: 0.10.8</p>
+      <p class="small">Version: 0.10.9</p>
     </div>
   </div>
 </template>
