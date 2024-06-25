@@ -106,7 +106,9 @@ body {
   border-radius: 4px;
   margin: 4px;
   font-size: 17px;
-  transition: background-color 1s ease;
+  transition:
+    background-color 1s ease,
+    color 1s ease;
 }
 
 .menu-button.active,
@@ -143,7 +145,7 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   transition:
     background-color 0.25s ease,
-    fill 1s ease;
+    fill 0.25s ease;
 }
 
 .light-mode .table-add:hover,
@@ -156,7 +158,7 @@ body {
   background-color: rgba(0, 0, 0, 0.1);
   transition:
     background-color 0.25s ease,
-    fill 1s ease;
+    fill 0.25s ease;
 }
 
 .navbar a:not(:first-child) {
@@ -239,7 +241,7 @@ body {
   animation: fadeIn 1s forwards;
   transition:
     background-color 1s ease,
-    color 1s ease;
+    fill 1s ease;
   margin-left: auto;
 }
 
@@ -264,6 +266,9 @@ body {
   border-radius: 4px;
   overflow: hidden;
   white-space: nowrap;
+  transition:
+    background-color 1s ease,
+    color 1s ease;
 }
 
 .table-box-spacer {
@@ -274,7 +279,9 @@ body {
   cursor: pointer;
   border: 2px solid white;
   border-radius: 4px;
-  transition: background-color 1s ease;
+  transition:
+    background-color 1s ease,
+    color 1s ease;
 }
 
 img {
@@ -393,11 +400,8 @@ input,
 .light-mode .icon-mobile,
 .light-mode .menu-button,
 .light-mode p,
-.light-mode a {
+.light-mode .navbar a {
   color: black;
-  transition:
-    background-color 1s ease,
-    color 1s ease;
 }
 
 .light-mode .table-add,
@@ -407,7 +411,4 @@ input,
 .light-mode .menu-button-settings,
 .light-mode .navbar {
   background-color: rgba(255, 255, 255, 0.6);
-  transition:
-    background-color 1s ease,
-    color 1s ease;
 }
