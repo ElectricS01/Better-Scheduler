@@ -64,6 +64,7 @@ body {
   width: 200%;
   height: 200%;
   background-size: cover;
+  user-select: none;
   filter: brightness(1) blur(10px) saturate(1);
   animation: moveImage 100s infinite alternate;
   transition:
@@ -139,6 +140,14 @@ body {
   transition:
     background-color 1s ease,
     fill 1s ease;
+}
+
+.navbar a.active {
+  background-color: #ffffff13;
+}
+
+.light-mode .navbar a.active {
+  background-color: #00000013;
 }
 
 .table-add:hover,
@@ -248,6 +257,16 @@ body {
     background-color 1s ease,
     fill 1s ease;
   margin-left: auto;
+}
+
+.menu-button-settings:active,
+.menu-button:active {
+  background-color: #ffffff13;
+}
+
+.light-mode .menu-button-settings:active,
+.light-mode .menu-button:active {
+  background-color: #00000013;
 }
 
 .table {
