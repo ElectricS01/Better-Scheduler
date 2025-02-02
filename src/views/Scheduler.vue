@@ -8,7 +8,9 @@
           :key="obj.name"
           class="menu-button"
           :class="{ active: option === index }"
-          @click="(option = index), router.push('/scheduler?page=' + obj.name)"
+          @click="
+            ((option = index), router.push('/scheduler?page=' + obj.name))
+          "
         >
           {{ obj.name }}
         </div>
@@ -39,7 +41,9 @@
               flex:
                 'calc(100% / ' +
                 newData[option].widths[index][index1] +
-                ' - 14px) 0 0'
+                settings
+                  ? 1
+                  : 0 + ' - 14px) 0 0'
             }"
           >
             {{
